@@ -1,0 +1,146 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #f9fafb;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #3b7a57;
+  color: white;
+  padding: 10px 20px;
+  position: relative;
+  height: 50px;
+}
+
+.site-name {
+  font-size: x-large;
+  font-weight: 800;
+}
+
+.icon {
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+
+/* Hide checkboxes */
+.toggle {
+  display: none;
+}
+
+/* Dropdown base */
+.dropdown {
+  display: none;
+  position: absolute;
+  background-color: white;
+  color: black;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.dropdown.left {
+  top: 50px;
+  left: 20px;
+}
+
+.dropdown.right {
+  top: 50px;
+  right: 20px;
+}
+
+/* Links inside dropdown */
+.dropdown a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: black;
+  transition: background 0.2s;
+}
+
+.dropdown a:hover {
+  background-color: #e6f3e6;
+}
+
+/* Checkbox toggle trick */
+#menu-toggle:checked ~ .dropdown.left {
+  display: block;
+  animation: fadeIn 0.3s ease;
+}
+
+#profile-toggle:checked ~ .dropdown.right {
+  display: block;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; 
+    transform: translateY(-10px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+/* Content */
+.content {
+  padding: 40px;
+  text-align: center;
+}
+
+.banner {
+  background-color: #e8f5e9;
+  padding: 40px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  font-size: 20px;
+  height: 300px;
+}
+
+
+.info {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+  flex-direction: column;
+  position: relative;
+  right: 50px;
+}
+.title p{
+  position: relative;
+  bottom: 240px;
+  left: 130px;
+  font-size: larger;
+}
+.rule{
+    background-color: #e8f5e9;
+    height: 700px;
+    width: 900px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    position: relative;
+    left: 280px;
+    top: 35px;
+}
+.box {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  width: 270px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s;
+}
+.box:hover {
+  transform: scale(1.05);
+}
