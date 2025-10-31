@@ -106,7 +106,7 @@ body {
 
 .form-container {
   max-width: 1100px;  
-  height: 900px;    
+  height: 600px;    
   margin: 36px auto;
   background: #eaf6ea;
   border-radius: 12px;
@@ -149,7 +149,11 @@ textarea {
   padding: 6px 8px;
   background-color: white; }
 
-.submit { grid-column: 1 / -1; text-align: center; margin-top: 6px; }
+.submit { 
+    grid-column: 1 / -1; 
+    text-align: center; 
+    margin-top: 6px;
+     }
 button {
   background: #008000;
   color: #fff;
@@ -159,6 +163,7 @@ button {
   width: 200px;
   border-radius: 6px;
   cursor: pointer;
+  font-family: 'Poppins',sans-serif;
 }
 button:hover { background: #005c00; }
 
