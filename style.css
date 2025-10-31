@@ -30,12 +30,10 @@ body {
   transform: scale(1.1);
 }
 
-/* Hide checkboxes */
 .toggle {
   display: none;
 }
 
-/* Dropdown base */
 .dropdown {
   display: none;
   position: absolute;
@@ -57,7 +55,6 @@ body {
   right: 20px;
 }
 
-/* Links inside dropdown */
 .dropdown a {
   display: block;
   padding: 10px 15px;
@@ -70,7 +67,6 @@ body {
   background-color: #e6f3e6;
 }
 
-/* Checkbox toggle trick */
 #menu-toggle:checked ~ .dropdown.left {
   display: block;
   animation: fadeIn 0.3s ease;
@@ -82,24 +78,27 @@ body {
 }
 
 @keyframes fadeIn {
-  from {opacity: 0; 
-    transform: translateY(-10px);}
-  to {opacity: 1; transform: translateY(0);}
+  from {
+    opacity: 0; 
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1; 
+    transform: translateY(0);
+  }
 }
 
-/* Content */
 .content {
   padding: 40px;
   text-align: center;
 }
 
-.banner {
-  background-color: #e8f5e9;
-  padding: 40px;
-  border-radius: 10px;
-  margin-bottom: 30px;
-  font-size: 20px;
-  height: 300px;
+#farm_banner{
+  height: 540px;
+  width: 1450px;
+  border-radius: 20px;
+  position: relative;
+  right: 10px;
 }
 
 
