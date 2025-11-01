@@ -15,6 +15,9 @@ body {
   padding: 10px 20px;
   position: relative;
   height: 70px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .site-name {
@@ -33,12 +36,11 @@ body {
   transform: scale(1.1);
 }
 
-/* Hide checkboxes */
 .toggle {
   display: none;
 }
 
-/* Dropdown base */
+
 .dropdown {
   display: none;
   position: absolute;
@@ -60,7 +62,6 @@ body {
   right: 20px;
 }
 
-/* Links inside dropdown */
 .dropdown a {
   display: block;
   padding: 10px 15px;
@@ -73,7 +74,6 @@ body {
   background-color: #e6f3e6;
 }
 
-/* Checkbox toggle trick */
 #menu-toggle:checked ~ .dropdown.left {
   display: block;
   animation: fadeIn 0.3s ease;
@@ -191,3 +191,5 @@ button:hover { background: #005c00; }
   .radio-group { gap: 12px; flex-wrap: wrap; }
   .form-container { padding: 16px; margin: 18px; }
 }
+
+
