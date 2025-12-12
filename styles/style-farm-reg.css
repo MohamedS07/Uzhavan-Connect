@@ -163,7 +163,7 @@ textarea {
   padding: 6px 8px;
   background-color: white; }
 
-.submit { grid-column: 1 / -1; text-align: center; margin-top: 6px; }
+.buttons { grid-column: 1 / -1; text-align: center; margin-top: 6px; }
 button {
   background: #008000;
   color: #fff;

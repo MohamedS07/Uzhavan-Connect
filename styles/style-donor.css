@@ -63,7 +63,6 @@ body {
   right: 20px;
 }
 
-/* Links inside dropdown */
 .dropdown a {
   display: block;
   padding: 10px 15px;
@@ -76,7 +75,6 @@ body {
   background-color: #e6f3e6;
 }
 
-/* Checkbox toggle trick */
 #menu-toggle:checked ~ .dropdown.left {
   display: block;
   animation: fadeIn 0.3s ease;
@@ -152,10 +150,11 @@ textarea {
   padding: 6px 8px;
   background-color: white; }
 
-.submit { 
+.buttons { 
     grid-column: 1 / -1; 
     text-align: center; 
     margin-top: 6px;
+    
      }
 button {
   background: #008000;
