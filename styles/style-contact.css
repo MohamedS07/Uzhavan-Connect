@@ -285,4 +285,183 @@ footer {
   padding-top: 10px;
   color: #e0e0e0;
 }
+@media screen and (max-width: 426px) {
 
+  .navbar {
+    padding: 10px 15px;
+  }
+
+  .site-name a {
+    font-size: 20px;
+  }
+
+  .icon {
+    font-size: 22px;
+  }
+
+  .dropdown.left,
+  .dropdown.right {
+    width: 80%;
+    left: 10%;
+    right: 10%;
+  }
+.hero {
+    padding: 50px 15px;
+  }
+
+  .hero h1 {
+    font-size: 22px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .contact {
+    padding: 25px 15px;
+    gap: 20px;
+  }
+
+  .contact-box {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .contact-box h2 {
+    font-size: 18px;
+  }
+
+  .contact-box li {
+    font-size: 14px;
+  }
+
+  #quote-1,
+  #quote-2,
+  #quote-3 {
+    margin-top: 20px;
+  }
+
+  blockquote {
+    font-size: 14px;
+  }
+
+
+
+  footer {
+    padding: 25px 10px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .footer-section-social {
+    left: 0;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+  .footer-section-social a{
+    position: relative;
+    right: 30px;
+  }
+
+  .footer-bottom {
+    font-size: 12px;
+  }
+  .social-icons a.facebook:hover { 
+  background: #1877f2; 
+}
+.social-icons a.instagram:hover { 
+  background: #e4405f; 
+}
+.social-icons a.twitter:hover { 
+  background: #1da1f2; 
+}
+
+.social-icons a:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+
+
+.social-icons a:hover {
+  color: white;
+}
+}
+@media screen and (max-width: 769px) {
+
+  .hero {
+    padding: 60px 20px;
+  }
+
+  .hero h1 {
+    font-size: 26px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .contact {
+    padding: 30px 20px;
+  }
+
+  .contact-box {
+    width: 90%;
+    max-width: 420px;
+  }
+
+  #quote-1,
+  #quote-2,
+  #quote-3 {
+    margin-top: 40px;
+  }
+
+  .footer-section-about {
+    right: 0;
+    text-align: center;
+  }
+  .footer-section-contact{
+    text-align: center;
+    position: relative;
+  }
+.footer-section-contact p{
+  font-size: 13px;
+}
+
+  .footer-section-social {
+    left: 0;
+    text-align: center;
+  }
+.footer-section-social a{
+  position: relative;
+  left: 35px;
+}
+  .footer-container {
+    text-align: center;
+  }
+
+  .social-icons a.facebook:hover { 
+  background: #1877f2; 
+}
+.social-icons a.instagram:hover { 
+  background: #e4405f; 
+}
+.social-icons a.twitter:hover { 
+  background: #1da1f2; 
+}
+
+.social-icons a:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+
+
+.social-icons a:hover {
+  color: white;
+}
+}

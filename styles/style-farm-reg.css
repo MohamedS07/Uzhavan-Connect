@@ -163,7 +163,10 @@ textarea {
   padding: 6px 8px;
   background-color: white; }
 
-.buttons { grid-column: 1 / -1; text-align: center; margin-top: 6px; }
+.submit { 
+  grid-column: 1 / -1; 
+  text-align: center; 
+  margin-top: 6px; }
 button {
   background: #008000;
   color: #fff;
@@ -197,46 +200,165 @@ button:hover { background: #005c00; }
   height: 16px;
   margin: 0;
   appearance: radio;
-  -webkit-appearance: radio;
+}
+footer {
+  background-color: #2f6f4f;
+  color: #ffffff;
+  padding: 40px 20px 15px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-container h2,
+.footer-container h3 {
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.footer-container p,
+.footer-container a {
+  font-size: 14px;
+  color: #e8f5e9;
+  line-height: 1.6;
+  text-decoration: none;
+}
+
+.footer-container a:hover {
+  color: #ffd700;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 12px;
+}
+
+.social-icons a {
+  width: 38px;
+  height: 38px;
+  background: #3b7a57;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: white;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  transform: translateY(-3px);
+  background: #ffd700;
+  color: #2f6f4f;
+}
+.social-icons a.facebook:hover { 
+  background: #1877f2; 
+}
+.social-icons a.instagram:hover { 
+  background: #e4405f; 
+}
+.social-icons a.twitter:hover { 
+  background: #1da1f2; 
+}
+
+.social-icons a:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
 }
 
 
+.social-icons a:hover {
+  color: white;
+}
+.footer-bottom {
+  margin-top: 25px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255,255,255,0.3);
+  text-align: center;
+  font-size: 13px;
+  color: #e0e0e0;
+}
 
-@media screen and (max-width: 769px) {
+@media (max-width: 426px) {
+
+  .navbar {
+    padding: 10px;
+    height: auto;
+  }
+
+  .site-name a {
+    font-size: 18px;
+  }
+
+  .icon {
+    font-size: 22px;
+  }
 
   .form-container {
     max-width: 95%;
-    padding: 20px;
+    height: auto;
+    margin: 20px auto;
+    padding: 15px;
+  }
+
+  .form-container h2 {
+    font-size: 20px;
   }
 
   form {
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-  }
-  .footer-section-about {
-    right: 0;
-    text-align: center;
-  }
-  .footer-section-contact{
-    text-align: center;
-    position: relative;
-  }
-.footer-section-contact p{
-  font-size: 13px;
-}
-
-  .footer-section-social {
-    left: 0;
-    text-align: center;
-  }
-.footer-section-social a{
-  position: relative;
-  left: 35px;
-}
-  .footer-container {
-    text-align: center;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 5px;
   }
 
+  .full {
+    grid-column: 1 / -1;
+  }
+
+  input[type="text"],
+  input[type="file"],
+  select,
+  textarea,
+  #date {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .radio-group {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .submit {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  button {
+    width: 100%;
+    margin-top: 10px;
+  }
+  .social-icons a:hover {
+  transform: translateY(-3px);
+  background: #ffd700;
+  color: #2f6f4f;
+}
   .social-icons a.facebook:hover { 
   background: #1877f2; 
 }
@@ -256,42 +378,24 @@ button:hover { background: #005c00; }
 .social-icons a:hover {
   color: white;
 }
+  
 }
 
-@media screen and (max-width: 426px) {
-
-  .navbar {
-    padding: 10px 15px;
-  }
+@media (max-width: 769px) {
 
   .site-name a {
-    font-size: 20px;
-  }
-
-  .icon {
     font-size: 22px;
   }
 
-  .dropdown.left
-  {
-    width: 90px;
-    left: 10%;
-    right: 10%;
-  }
-  .dropdown.right {
-    width: 100px;
-    right:20px ;
-  }
-.form-container {
-    width: 500px;
-    padding: 15px;
-    margin: 20px 10px;
-    height: 1500px;
+  .form-container {
+    max-width: 90%;
+    height: auto;
+    padding: 20px;
   }
 
   form {
-    grid-template-columns: 1fr !important;
-    gap: 12px;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px 18px;
   }
 
   #date {
@@ -299,18 +403,11 @@ button:hover { background: #005c00; }
   }
 
   .radio-group {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
+    gap: 15px;
   }
 
   footer {
     padding: 25px 10px;
-    background-color: #3b7a57;
-    color: white;
-  padding: 40px 20px 10px;
-  font-family: "Poppins", sans-serif;
-  margin-top: 50px;
   }
 
   .footer-container {
@@ -318,30 +415,17 @@ button:hover { background: #005c00; }
     gap: 20px;
     text-align: center;
   }
-.footer-section-links ul {
-  list-style: none;
-  padding: 0;
-}
 
-.footer-section-links ul li {
-  margin-bottom: 8px;
-}
-
-.footer-section-links ul li a {
-  color: #f0f0f0;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.footer-section-links ul li a:hover {
-  color: #ffd700;
-}
   .footer-section-social {
     left: 0;
   }
 
   .social-icons {
     justify-content: center;
+  }
+  .footer-section-social a{
+    position: relative;
+    right: 30px;
   }
 
   .footer-bottom {
@@ -361,6 +445,7 @@ button:hover { background: #005c00; }
   transform: translateY(-4px);
   box-shadow: 0 3px 6px rgba(0,0,0,0.2);
 }
+
 
 .social-icons a:hover {
   color: white;
