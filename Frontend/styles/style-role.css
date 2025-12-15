@@ -118,37 +118,57 @@ body {
   left: 130px;
   font-size: larger;
 }
-.rule{
-    background-color: #e8f5e9;
-    height: 700px;
-    width: 900px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 20px;
-    position: relative;
-    left: 280px;
-    top: 35px;
-}
-.box {
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  width: 270px;
-  height: 50px;
+
+.role-page {
   display: flex;
-  align-items: center;
   justify-content: center;
-  transition: transform 0.3s;
-}
-.box:hover {
-  transform: scale(1.05);
+  align-items: center;
+  min-height: 80vh;
+  padding: 20px;
 }
 
-.box a{
-  text-decoration: none;
-  color: black;
+.role-card {
+  background: #e8f5e9;
+  width: 100%;
+  max-width: 500px;
+  padding: 50px 30px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
+
+.role-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #2f5d45;
+}
+
+.role-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.role-buttons button {
+  padding: 14px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  background: white;
+  color: #333;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.role-buttons button:hover {
+  background: #3b7a57;
+  color: white;
+  transform: translateY(-4px);
+}
+
 footer {
   background-color: #3b7a57;
   color: white;

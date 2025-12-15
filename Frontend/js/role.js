@@ -1,26 +1,18 @@
 const userId = localStorage.getItem("user_id");
 
-if (!userId) {
-  alert("User not found. Please register again.");
+function selectRole(role) {
+  fetch(`http://127.0.0.1:8000/users/${userId}/role`, {
+    method: "PUT",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ role })
+  })
+  .then(res => res.json())
+  .then(() => {
+    localStorage.setItem("role", role);
+
+    if (role === "farmer") window.location.href = "farmer.html";
+    if (role === "donor") window.location.href = "donor.html";
+    if (role === "ngo") window.location.href = "ngo.html";
+  });
 }
 
-async function updateRole(role, redirectPage) {
-  try {
-    const res = await fetch(`${API_BASE_URL}/users/${userId}/role`, {
-      method: "PUT",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ role })
-    });
-
-    if (!res.ok) {
-      const data = await res.json();
-      alert(data.detail || "Role update failed");
-      return;
-    }
-
-    window.location.href = redirectPage;
-  } catch (err) {
-    alert("Backend error");
-    console.error(err);
-  }
-}

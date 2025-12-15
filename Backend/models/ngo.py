@@ -1,10 +1,12 @@
-from sqlalchemy import Column, Integer, String
+from sqlalchemy import Column, Integer, String, ForeignKey
 from database import Base
 
 class NGO(Base):
     __tablename__ = "ngos"
 
     id = Column(Integer, primary_key=True, index=True)
+    user_id = Column(Integer, ForeignKey("users.id"), nullable=False)
+
     ngo_name = Column(String, nullable=False)
     registration_number = Column(String, nullable=False, unique=True)
     district = Column(String, nullable=False)

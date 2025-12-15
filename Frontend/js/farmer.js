@@ -1,29 +1,18 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const form = document.querySelector("form");
+document.querySelector("form").addEventListener("submit", async (e) => {
+  e.preventDefault();
 
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
+  const formData = new FormData(e.target);
+  formData.append("user_id", localStorage.getItem("user_id"));
 
-    const formData = new FormData(form);
-
-    try {
-      const res = await fetch(`${API_BASE_URL}/farmers/`, {
-        method: "POST",
-        body: formData
-      });
-
-      const result = await res.json();
-
-      if (!res.ok) {
-        alert("Farmer registration failed");
-        return;
-      }
-
-      alert("Farmer registered successfully");
-      form.reset();
-    } catch (err) {
-      alert("Backend error");
-      console.error(err);
-    }
+  const res = await fetch("http://127.0.0.1:8000/farmers/", {
+    method: "POST",
+    body: formData
   });
+
+  if (res.ok) {
+    alert("Farmer registered successfully");
+  } else {
+    alert("Error");
+  }
 });
+
