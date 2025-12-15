@@ -3,21 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NGO Registration</title>
+  <title>Donor Registration</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 
-  <link rel="stylesheet" href="../styles/style-ngo.css">
+  <link rel="stylesheet" href="../styles/style-donor.css">
 </head>
 <body>
 <header class="navbar">
 
     <input type="checkbox" id="menu-toggle" class="toggle">
     <label for="menu-toggle" class="icon">&#9776;</label>
-    <div class="site-name"><a href="../index.html">Uzhavan Connect</a></div>
+   <div class="site-name"><a href="../index.html">Uzhavan Connect</a></div>
 
     <input type="checkbox" id="profile-toggle" class="toggle">
     <label for="profile-toggle" class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 16 16">
@@ -36,78 +36,82 @@
   </header>
 <main>
   <div class="form-container">
-    <h2>NGO Registration</h2>
+    <h2>Donor Registration</h2>
     <form>
       <div>
-        <label>NGO Name</label><br>
-        <input type="text" placeholder="Enter NGO Name" required>
+        <label>Name</label><br>
+        <input type="text" placeholder="Enter your Name" required>
       </div>
       <div>
-        <label>Registration Number</label><br>
-        <input type="text" placeholder="Enter NGO Registration Number" required>
-      </div>
-      <div>
-        <label>District</label><br>
-        <select class="district" required>
-          <option value="">-- Select District --</option>
-            <option value="Ariyalur">Ariyalur</option>
-  <option value="Chengalpattu">Chengalpattu</option>
-  <option value="Chennai">Chennai</option>
-  <option value="Coimbatore">Coimbatore</option>
-  <option value="Cuddalore">Cuddalore</option>
-  <option value="Dharmapuri">Dharmapuri</option>
-  <option value="Dindigul">Dindigul</option>
-  <option value="Erode">Erode</option>
-  <option value="Kallakurichi">Kallakurichi</option>
-  <option value="Kancheepuram">Kancheepuram</option>
-  <option value="Karur">Karur</option>
-  <option value="Krishnagiri">Krishnagiri</option>
-  <option value="Madurai">Madurai</option>
-  <option value="Mayiladuthurai">Mayiladuthurai</option>
-  <option value="Nagapattinam">Nagapattinam</option>
-  <option value="Namakkal">Namakkal</option>
-  <option value="Perambalur">Perambalur</option>
-  <option value="Pudukottai">Pudukottai</option>
-  <option value="Ramanathapuram">Ramanathapuram</option>
-  <option value="Ranipet">Ranipet</option>
-  <option value="Salem">Salem</option>
-  <option value="Sivaganga">Sivaganga</option>
-  <option value="Tenkasi">Tenkasi</option>
-  <option value="Thanjavur">Thanjavur</option>
-  <option value="Theni">Theni</option>
-  <option value="Thoothukudi">Thoothukudi</option>
-  <option value="Tiruchirappalli">Tiruchirappalli</option>
-  <option value="Tirunelveli">Tirunelveli</option>
-  <option value="Tirupattur">Tirupattur</option>
-  <option value="Tiruppur">Tiruppur</option>
-  <option value="Tiruvallur">Tiruvallur</option>
-  <option value="Tiruvannamalai">Tiruvannamalai</option>
-  <option value="Tiruvarur">Tiruvarur</option>
-  <option value="Vellore">Vellore</option>
-  <option value="Viluppuram">Viluppuram</option>
-  <option value="Virudhunagar">Virudhunagar</option>
-  <option value="Nilgiris">Nilgiris</option>
+        <label for="state">Select State</label><br>
+<select id="state" name="state" required>
+  <option value="">-- Select State --</option>
+  <option value="Andhra Pradesh">Andhra Pradesh</option>
+  <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+  <option value="Assam">Assam</option>
+  <option value="Bihar">Bihar</option>
+  <option value="Chhattisgarh">Chhattisgarh</option>
+  <option value="Goa">Goa</option>
+  <option value="Gujarat">Gujarat</option>
+  <option value="Haryana">Haryana</option>
+  <option value="Himachal Pradesh">Himachal Pradesh</option>
+  <option value="Jharkhand">Jharkhand</option>
+  <option value="Karnataka">Karnataka</option>
+  <option value="Kerala">Kerala</option>
+  <option value="Madhya Pradesh">Madhya Pradesh</option>
+  <option value="Maharashtra">Maharashtra</option>
+  <option value="Manipur">Manipur</option>
+  <option value="Meghalaya">Meghalaya</option>
+  <option value="Mizoram">Mizoram</option>
+  <option value="Nagaland">Nagaland</option>
+  <option value="Odisha">Odisha</option>
+  <option value="Punjab">Punjab</option>
+  <option value="Rajasthan">Rajasthan</option>
+  <option value="Sikkim">Sikkim</option>
+  <option value="Tamil Nadu">Tamil Nadu</option>
+  <option value="Telangana">Telangana</option>
+  <option value="Tripura">Tripura</option>
+  <option value="Uttar Pradesh">Uttar Pradesh</option>
+  <option value="Uttarakhand">Uttarakhand</option>
+  <option value="West Bengal">West Bengal</option>
+  <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+  <option value="Chandigarh">Chandigarh</option>
+  <option value="Dadra and Nagar Haveli and Daman and Diu">Dadra and Nagar Haveli and Daman and Diu</option>
+  <option value="Delhi">Delhi</option>
+  <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+  <option value="Ladakh">Ladakh</option>
+  <option value="Lakshadweep">Lakshadweep</option>
+  <option value="Puducherry">Puducherry</option>
 </select>
-        </select>
-      </div>
-      <div>
-        <label>Contact Person</label><br>
-        <input type="text" placeholder="NGO Contact Person" required>
-      </div>
-      <div>
-        <label>Contact Number</label><br>
-        <input type="text" placeholder="Enter Contact Number" required>
+
       </div>
       <div>
         <label>Email</label><br>
-        <input type="text" placeholder="Enter Email">
+        <input type="text" placeholder="Enter your Address" required>
       </div>
       <div>
-        <label>Proof Document</label><br>
-        <input class="file" type="file">
+        <label>Phone Number</label><br>
+        <input type="text" placeholder="Enter your Phone Number" required>
+      </div><br/>
+      <div class="full">
+        <label>If you are Occupation / Organization ?</label><br><br>
+        <div class="radio-group">
+          <label class="radio-option">
+            <input type="radio" name="apply_type" value="Occupation / Organization">
+            Yes
+          </label>
+          <label class="radio-option">
+            <input type="radio" name="apply_type" value="Self">
+            No (Individual)
+          </label>
+        </div><br/>
+      </div>
+      <div>
+        <label>If Yes then enter your Occupation / Organization Name (optional)</label><br>
+        <input type="text" placeholder="Occupation / Organization">
       </div>
 
-      <div class="submit">
+      <div class="buttons">
         <button type="submit">Apply</button>
         <button type="reset">Reset</button>
       </div>
@@ -147,8 +151,11 @@
   </div>
 
   <div class="footer-bottom">
-<p>© 2025 Uzhavan Connect | Designed for Farmers’ Empowerment </p>
+    <p>© 2025 Uzhavan Connect | Designed for Farmers’ Empowerment </p>
   </div>
 </footer>
+<script src="js/config.js"></script>
+<script src="js/donor.js"></script>
+
 </body>
 </html>
