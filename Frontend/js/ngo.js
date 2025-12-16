@@ -1,33 +1,45 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const form = document.querySelector("form");
+document.getElementById("ngoform").addEventListener("submit", async function (e) {
+  e.preventDefault();
 
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
+  const userId = localStorage.getItem("user_id");
+  if (!userId) {
+    alert("Please login first");
+    return;
+  }
 
-    const data = {
-      name: document.getElementById("name").value,
-      registration_number: document.getElementById("reg_no").value,
-      email: document.getElementById("email").value,
-      phone: document.getElementById("phone").value
-    };
+  const name = document.querySelector('input[placeholder="Enter NGO Name"]').value;
+  const registrationNumber = document.querySelector('input[placeholder="Enter NGO Registration Number"]').value;
+  const district = document.querySelector(".district").value;
+  const contactPerson = document.querySelector('input[placeholder="NGO Contact Person"]').value;
+  const phone = document.querySelector('input[placeholder="Enter Contact Number"]').value;
+  const email = document.querySelector('input[placeholder="Enter Email"]').value;
 
-    try {
-      const res = await fetch(`${API_BASE_URL}/ngos/`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data)
-      });
+  const payload = {
+    user_id: parseInt(userId),
+    name: name,
+    registration_number: registrationNumber,
+    district: district,
+    contact_person: contactPerson,
+    phone: phone,
+    email: email
+  };
 
-      if (!res.ok) {
-        alert("NGO registration failed");
-        return;
-      }
+  try {
+    const res = await fetch(`${API_BASE_URL}/ngos/`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(payload)
+    });
 
-      alert("NGO registered successfully");
-      form.reset();
-    } catch (err) {
-      alert("Backend error");
-      console.error(err);
-    }
-  });
+    if (!res.ok) throw new Error("Failed");
+
+    alert("✅ NGO registered successfully");
+    document.getElementById("ngoForm").reset();
+
+  } catch (err) {
+    alert("❌ Error registering NGO");
+    console.error(err);
+  }
 });

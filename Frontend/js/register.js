@@ -1,3 +1,5 @@
+const API_BASE_URL = "http://127.0.0.1:8000";
+
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector("form");
 
@@ -5,17 +7,17 @@ document.addEventListener("DOMContentLoaded", () => {
     e.preventDefault();
 
     const data = {
-      name: document.getElementById("name").value,
       email: document.getElementById("email").value,
-      phone: document.getElementById("Phone").value,
       password: document.getElementById("password").value,
-      role: "user"
+      role: "user"   // default role
     };
 
     try {
       const res = await fetch(`${API_BASE_URL}/users/register`, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json"
+        },
         body: JSON.stringify(data)
       });
 
@@ -26,8 +28,12 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
+      // ✅ VERY IMPORTANT
       localStorage.setItem("user_id", result.id);
+
+      // 👉 go to role selection page
       window.location.href = "role.html";
+
     } catch (err) {
       alert("Backend not reachable");
       console.error(err);

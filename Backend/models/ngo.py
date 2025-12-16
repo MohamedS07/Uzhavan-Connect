@@ -13,5 +13,5 @@ class NGO(Base):
     contact_person = Column(String, nullable=False)
     contact_number = Column(String, nullable=False)
     email = Column(String, nullable=True)
-    proof_document = Column(String, nullable=True)  # file name / path
+    proof_document = Column(String, nullable=True)  
 

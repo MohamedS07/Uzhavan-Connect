@@ -36,19 +36,19 @@
 <main>
   <div class="form-container">
     <h2>Farmer Registration</h2>
-    <form>
+    <form id="farmerForm" enctype="multipart/form-data">
       <div>
         <label>Name</label><br>
-        <input type="text" placeholder="Enter your Name" required>
+        <input name="name" type="text" placeholder="Enter your Name" required>
       </div>
       <div>
         <label>Village</label><br>
-        <input type="text" placeholder="Enter your Village" required>
+        <input name="village" type="text" placeholder="Enter your Village" required>
       </div>
       <div>
         <label>District</label><br>
-        <select class="district" required>
-          <option value="">-- Select District --</option>
+        <select name="district" class="district" required>
+          <option  value="">-- Select District --</option>
             <option value="Ariyalur">Ariyalur</option>
   <option value="Chengalpattu">Chengalpattu</option>
   <option value="Chennai">Chennai</option>
@@ -90,53 +90,53 @@
       </div>
       <div>
         <label>Address</label><br>
-        <input type="text" placeholder="Enter your Address" required>
+        <input name="address" type="text" placeholder="Enter your Address" required>
       </div>
       <div>
         <label>Phone Number</label><br>
-        <input type="text" placeholder="Enter your Phone Number" required>
+        <input name="phone" type="text" placeholder="Enter your Phone Number" required>
       </div>
       <div>
         <label>Loan Amount</label><br>
-        <input type="text" placeholder="Enter Loan Amount">
+        <input name="loan_amount" type="text" placeholder="Enter Loan Amount" required>
       </div>
       <div>
         <label>Last Date</label><br>
-        <input id="date" type="date">
+        <input name="last_date" class="date" type="date" required>
       </div>
       <div>
         <label>Bank Account No</label><br>
-        <input type="text" placeholder="Enter Account Number">
+        <input name="bank_account_no" type="text" placeholder="Enter Account Number" required>
       </div>
       <div>
         <label>Bank IFSC</label><br>
-        <input type="text" placeholder="Enter IFSC Code">
+        <input name="bank_ifsc" type="text" placeholder="Enter IFSC Code" required>
       </div>
       <div>
         <label>Photo</label><br>
-        <input class="file" type="file">
+        <input class="file" type="file" name="photo">
       </div>
       <div>
         <label>Aadhar Photo</label><br>
-        <input class="file" type="file">
+        <input class="file" type="file" name="aadhar_photo" required>
       </div>
       <div>
         <label>Pan Card Photo</label><br>
-        <input class="file" type="file">
+        <input class="file" type="file" name="pan_photo" required>
       </div>
       <div>
         <label>Loan Detail Photo</label><br>
-        <input class="file" type="file">
+        <input class="file" type="file" name="loan_detail_photo" required>
       </div>
       <div class="full">
         <label>Who is applying?</label><br><br>
         <div class="radio-group">
           <label class="radio-option">
-            <input type="radio" name="apply_type" value="farmer">
+            <input type="radio" name="apply_type" value="Self" required>
             Farmer (Self)
           </label>
           <label class="radio-option">
-            <input type="radio" name="apply_type" value="volunteer">
+            <input type="radio" name="apply_type" value="NGO">
             NGO (on behalf of farmer)
           </label>
         </div>
