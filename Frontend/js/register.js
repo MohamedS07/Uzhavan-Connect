@@ -1,42 +1,45 @@
-const API_BASE_URL = "http://127.0.0.1:8000";
-
 document.addEventListener("DOMContentLoaded", () => {
-  const form = document.querySelector("form");
+  const form = document.getElementById("registerForm");
+
+  if (!form) {
+    console.error("❌ Register form not found");
+    return;
+  }
 
   form.addEventListener("submit", async (e) => {
-    e.preventDefault();
+    e.preventDefault(); // 🔥 VERY IMPORTANT
 
-    const data = {
-      email: document.getElementById("email").value,
-      password: document.getElementById("password").value,
-      role: "user"   // default role
-    };
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
 
     try {
       const res = await fetch(`${API_BASE_URL}/users/register`, {
         method: "POST",
         headers: {
-          "Content-Type": "application/json"
+          "Content-Type": "application/json",
         },
-        body: JSON.stringify(data)
+        body: JSON.stringify({
+          email: email,
+          password: password,
+        }),
       });
 
-      const result = await res.json();
+      const data = await res.json();
 
       if (!res.ok) {
-        alert(result.detail || "Registration failed");
+        alert(data.detail || "Registration failed");
         return;
       }
 
-      // ✅ VERY IMPORTANT
-      localStorage.setItem("user_id", result.id);
+      // ✅ SAVE USER ID
+      localStorage.setItem("user_id", data.id);
 
-      // 👉 go to role selection page
+      // ✅ REDIRECT
       window.location.href = "role.html";
 
     } catch (err) {
+      console.error("❌ Backend not reachable", err);
       alert("Backend not reachable");
-      console.error(err);
     }
   });
 });
